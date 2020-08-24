@@ -1,0 +1,42 @@
+package com.solution;
+
+import static java.lang.Math.max;
+
+public class Main {
+    // Track the count for 1
+    public static int maxOnesWithReplacement1(int[] arr, int k) {
+        int maxLength = 0, start = 0, maxOneCount = 0;
+        for (int end = 0; end < arr.length; end++) {
+            if (arr[end] == 1)
+                maxOneCount++;
+            while (end - start + 1 - maxOneCount > k) {
+                if (arr[start] == 1)
+                    maxOneCount--;
+                start++;
+            }
+            maxLength = max(maxLength, end - start + 1);
+        }
+        return maxLength;
+    }
+
+    // Track the count for 0
+    public static int maxOnesWithReplacement2(int[] arr, int k) {
+        int maxLength = 0, start = 0, zeroCount = 0;
+        for (int end = 0; end < arr.length; end++) {
+            if (arr[end] == 0)
+                zeroCount++;
+            while (zeroCount > k) {
+                if (arr[start] == 0)
+                    zeroCount--;
+                start++;
+            }
+            maxLength = max(maxLength, end - start + 1);
+        }
+        return maxLength;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(maxOnesWithReplacement2(new int[]{0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1}, 2));
+        System.out.println(maxOnesWithReplacement2(new int[]{0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1}, 3));
+    }
+}
