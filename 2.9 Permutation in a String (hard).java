@@ -3,6 +3,7 @@ package com.solution;
 import java.util.HashMap;
 import java.util.Map;
 
+// Find out if the string contains any permutation of the pattern.
 public class Main {
     public static boolean stringPermutationMatch(String str, String pattern) {
         Map<Character, Integer> patternMap = new HashMap<>();

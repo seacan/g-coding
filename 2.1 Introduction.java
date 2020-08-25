@@ -2,6 +2,7 @@ package com.solution;
 
 import java.util.Arrays;
 
+// Given an array, find the average of all contiguous subarrays of size ‘K’ in it.
 public class Main {
     public static double[] getAverage(int[] arr, int k) {
         double[] res = new double[arr.length - k + 1];

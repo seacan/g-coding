@@ -1,5 +1,6 @@
 package com.solution;
 
+// Remove all duplicates from it, not use any extra space.
 public class Main {
     public static int removeDuplicates(int[] arr) {
         if (arr.length == 1) return 1;

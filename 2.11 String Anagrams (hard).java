@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+// Find all anagrams of the pattern in the given string.
 public class Main {
     public static List<Integer> findStringAnagrams(String str, String pattern) {
         Map<Character, Integer> patternMap = new HashMap<>();

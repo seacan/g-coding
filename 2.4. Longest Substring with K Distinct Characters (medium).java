@@ -3,6 +3,7 @@ package com.solution;
 import java.util.HashMap;
 import java.util.Map;
 
+// Find the length of the longest substring in it with no more than K distinct characters.
 public class Main {
     public static int longestSubstringKDistinct(String str, int k) {
         if (str == null || str.length() == 0 || str.length() < k) {

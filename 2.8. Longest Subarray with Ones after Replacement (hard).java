@@ -2,6 +2,7 @@ package com.solution;
 
 import static java.lang.Math.max;
 
+// Allowed to replace no more than ‘k’ 0s with 1s, find the length of the longest contiguous subarray having all 1s.
 public class Main {
     // Track the count for 1
     public static int maxOnesWithReplacement1(int[] arr, int k) {

@@ -7,6 +7,7 @@ import java.util.Set;
 
 import static java.lang.Math.max;
 
+// Find the length of the longest substring which has no repeating characters.
 public class Main {
     public static int noRepeatedSubstringWithSet(String str) {
         int maxLength = 0, start = 0;

@@ -2,6 +2,7 @@ package com.solution;
 
 import static java.lang.Math.max;
 
+// Find the maximum sum of any contiguous subarray of size ‘k’.
 public class Main {
     public static int findMaxSumSubArray(int[] arr, int k) {
         int res = 0, localSum = 0, start = 0;

@@ -2,6 +2,7 @@ package com.solution;
 
 import java.util.Arrays;
 
+// Create a new array containing squares of all the number of the input array in the sorted order.
 public class Main {
     public static int[] makeSquare(int[] arr) {
         int[] res = new int[arr.length];

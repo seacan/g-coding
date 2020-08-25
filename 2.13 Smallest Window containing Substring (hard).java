@@ -3,6 +3,7 @@ package com.solution;
 import java.util.HashMap;
 import java.util.Map;
 
+// Find the smallest substring in the given string which has all the characters of the given pattern.
 public class Main {
     public static String findMinSubstring(String str, String pattern) {
         Map<Character, Integer> patternMap = new HashMap<>();

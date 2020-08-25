@@ -2,6 +2,7 @@ package com.solution;
 
 import static java.lang.Math.min;
 
+// Find the length of the smallest contiguous subarray whose sum is greater than or equal to ‘S’
 public class Main {
     public static int findMinSubArray(int[] arr, int s) {
         int res = Integer.MAX_VALUE, localSum = 0, start = 0;

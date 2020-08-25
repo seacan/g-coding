@@ -2,6 +2,7 @@ package com.solution;
 
 import java.util.Arrays;
 
+// Given an array containing 0s, 1s and 2s, sort the array in-place.
 public class Main {
     public static void sort(int[] arr) {
         int left = 0, right = arr.length - 1;

@@ -2,6 +2,7 @@ package com.solution;
 
 import java.util.Arrays;
 
+// Count all triplets in it such that sum < target.
 public class Main {
     public static int searchTriplet(int[] arr, int target) {
         Arrays.sort(arr);

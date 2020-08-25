@@ -2,6 +2,7 @@ package com.solution;
 
 import java.util.*;
 
+// Find all the starting indices of substrings in the given string that are a concatenation of all the given words exactly once without any overlapping of words.
 public class Main {
     public static List<Integer> finWordConcatenation(String str, String[] words) {
         Map<String, Integer> wordMap = new HashMap<>();

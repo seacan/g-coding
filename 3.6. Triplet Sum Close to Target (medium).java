@@ -2,6 +2,7 @@ package com.solution;
 
 import java.util.Arrays;
 
+// Find a triplet in the array whose sum is as close to the target number as possible, return the sum of the triplet
 public class Main {
     public static int searchTriplet(int[] arr, int target) {
         Arrays.sort(arr);

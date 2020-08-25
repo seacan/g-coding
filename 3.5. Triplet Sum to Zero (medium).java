@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+// Find all unique triplets in it that add up to zero.
 public class Main {
     public static List<List<Integer>> tripleSumToZero(int[] arr) {
         Arrays.sort(arr);

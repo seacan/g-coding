@@ -1,5 +1,6 @@
 package com.solution;
 
+// Find the length of the smallest subarray in it which when sorted will sort the whole array.
 public class Main {
     public static int sort(int[] arr) {
         int left = 0, right = arr.length - 1;

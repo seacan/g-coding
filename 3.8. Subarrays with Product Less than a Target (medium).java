@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+// Find all of its contiguous subarrays whose product is less than the target number.
 public class Main {
     public static List<List<Integer>> findSubArray(int[] arr, int target) {
         List<List<Integer>> res = new ArrayList<>();

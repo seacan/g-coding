@@ -2,6 +2,7 @@ package com.solution;
 
 import java.util.Arrays;
 
+// Find a pair in the array whose sum is equal to the given target.
 public class Main {
     public static int[] pairWithTargetSum(int[] arr, int target) {
         int left = 0, right = arr.length - 1;

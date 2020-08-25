@@ -6,7 +6,7 @@ import java.util.Map;
 import static java.lang.Math.max;
 
 public class Main {
-    public static int MaxFruitCountOfKType(char[] arr, int k) {
+    public static int maxFruitCountOfKType(char[] arr, int k) {
         int maxLength = 0, start = 0;
         Map<Character, Integer> map = new HashMap<>();
         for (int end = 0; end < arr.length; end++) {
@@ -23,7 +23,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println(MaxFruitCountOfKType(new char[]{'A', 'B', 'C', 'A', 'C'}, 2));
-        System.out.println(MaxFruitCountOfKType(new char[]{'A', 'B', 'C', 'B', 'B', 'C'}, 2));
+        System.out.println(maxFruitCountOfKType(new char[]{'A', 'B', 'C', 'A', 'C'}, 2));
+        System.out.println(maxFruitCountOfKType(new char[]{'A', 'B', 'C', 'B', 'B', 'C'}, 2));
     }
 }

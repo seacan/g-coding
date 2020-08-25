@@ -1,5 +1,6 @@
 package com.solution;
 
+// Given two strings containing backspaces (identified by the character ‘#’), check if the two strings are equal.
 public class Main {
     public static boolean compare(String str1, String str2) {
         int index1 = str1.length() - 1, index2 = str2.length() - 1;
