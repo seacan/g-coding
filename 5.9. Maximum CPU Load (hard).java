@@ -19,9 +19,8 @@ public class Main {
         Queue<Job> minHeap = new PriorityQueue<Job>(jobs.size(), Comparator.comparingInt(a -> a.end));
         int maxLoad = 0, curLoad = 0;
         for (Job job : jobs) {
-            while (!minHeap.isEmpty() && job.start > minHeap.peek().end) {
+            while (!minHeap.isEmpty() && job.start > minHeap.peek().end)
                 curLoad -= minHeap.poll().load;
-            }
             minHeap.offer(job);
             curLoad += job.load;
             maxLoad = Math.max(maxLoad, curLoad);

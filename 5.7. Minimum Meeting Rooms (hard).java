@@ -20,9 +20,8 @@ public class Main {
         Queue<Meeting> minHeap = new PriorityQueue<Meeting>(meetings.size(), Comparator.comparingInt(a -> a.end));
         int minRooms = 0;
         for (Meeting meeting : meetings) {
-            while (!minHeap.isEmpty() && meeting.start >= minHeap.peek().end) {
-                minHeap.poll();
-            }
+            while (!minHeap.isEmpty() && meeting.start >= minHeap.peek().end)
+                minHeap.poll();            
             minHeap.offer(meeting);
             minRooms = Math.max(minRooms, minHeap.size());
         }

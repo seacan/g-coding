@@ -12,37 +12,21 @@ class Node {
 // Find the starting node of the cycle.
 public class Main {
     public static Node findCycleStart(Node head) {
-        int cycleLength = 0;
-        Node slow = head, fast = head;
+        if (head == null) return null;
+        Node fast = head, slow = head;
         while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
-            if (fast == slow) {
-                cycleLength = calculateCycleLength(slow);
-                break;
-            }
+            if (fast == slow) break;
         }
 
-        Node p1 = head, p2 = head;
-        while (cycleLength > 0) {
-            p1 = p1.next;
-            cycleLength--;
+        if (fast == null || fast.next == null) return null;
+        while (head != slow) {
+            head = head.next;
+            slow = slow.next;
         }
-        while (p1 != p2) {
-            p1 = p1.next;
-            p2 = p2.next;
-        }
-        return p1;
-    }
 
-    private static int calculateCycleLength(Node node) {
-        int cycleLength = 0;
-        Node cur = node;
-        do {
-            node = node.next;
-            cycleLength++;
-        } while (node != cur);
-        return cycleLength;
+        return head;
     }
 
     public static void main(String[] args) {

@@ -24,11 +24,10 @@ public class Main {
         res.add(intervals.get(0));
         for (int i = 1; i < intervals.size(); i++) {
             Interval last = res.get(res.size() - 1), cur = intervals.get(i);
-            if (cur.start <= last.end) {
+            if (cur.start <= last.end)
                 last.end = Math.max(last.end, cur.end);
-            } else {
+            else
                 res.add(cur);
-            }
         }
         return res;
     }

@@ -16,9 +16,8 @@ class Interval {
 public class Main {
     public static boolean isConflicting(Interval[] intervals) {
         Arrays.sort(intervals, Comparator.comparingInt(a -> a.start));
-        for (int i = 1; i < intervals.length; i++) {
-            if (intervals[i].start <= intervals[i - 1].end) return false;
-        }
+        for (int i = 1; i < intervals.length; i++)
+            if (intervals[i].start <= intervals[i - 1].end) return false;        
         return true;
     }
 

@@ -9,7 +9,7 @@ class Node {
     }
 }
 
-// Check if the LinkedList is a palindrome or not.
+// Rearrange nodes from the second half of the LinkedList are inserted alternately to the nodes from the first half in reverse order.
 public class Main {
     public static void reorder(Node head) {
         if (head == null || head.next == null) return;

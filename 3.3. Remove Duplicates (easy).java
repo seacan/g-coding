@@ -7,9 +7,8 @@ public class Main {
 
         int cur = 0;
         for (int i = 1; i < arr.length; i++) {
-            if (arr[cur] != arr[i]) {
-                arr[++cur] = arr[i];
-            }
+            if (arr[cur] != arr[i])
+                arr[++cur] = arr[i];            
         }
         return cur + 1;
     }
