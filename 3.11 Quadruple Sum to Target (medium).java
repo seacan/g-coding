@@ -31,7 +31,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Output: [-3, -1, 1, 4], [-3, 1, 1, 2]
         System.out.println(searchQuadruplets(new int[]{4, 1, 2, -1, 1, -3}, 1));
+        // Output: [-2, 0, 2, 2], [-1, 0, 1, 2]
         System.out.println(searchQuadruplets(new int[]{2, 0, -1, 1, -2, 2}, 2));
     }
 }

@@ -32,7 +32,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Output: [-3, 1, 2], [-2, 0, 2], [-2, 1, 1], [-1, 0, 1]
         System.out.println(tripleSumToZero(new int[]{-3, 0, 1, 2, -1, 1, -2}));
+        // Output: [[-5, 2, 3], [-2, -1, 3]]
         System.out.println(tripleSumToZero(new int[]{-5, 2, -1, -2, 3}));
     }
 }

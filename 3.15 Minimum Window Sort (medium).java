@@ -8,7 +8,7 @@ public class Main {
         if (left == arr.length - 1) return 0;
         while (right > 0 && arr[right] >= arr[right - 1]) right--;
 
-        int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
+        int min = arr[left], max = arr[right];
         for (int i = left; i <= right; i++) {
             min = Math.min(min, arr[i]);
             max = Math.max(max, arr[i]);
@@ -21,9 +21,13 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Output: 5
         System.out.println(sort(new int[]{1, 2, 5, 3, 7, 10, 9, 12}));
+        // Output: 5
         System.out.println(sort(new int[]{1, 3, 2, 0, -1, 7, 10}));
+        // Output: 0
         System.out.println(sort(new int[]{1, 2, 3}));
+        // Output: 3
         System.out.println(sort(new int[]{3, 2, 1}));
     }
 }

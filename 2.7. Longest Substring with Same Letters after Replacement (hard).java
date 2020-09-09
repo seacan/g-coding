@@ -18,6 +18,7 @@ public class Main {
             while (end - start + 1 - maxRepeatCharCount > k) {
                 char head = str.charAt(start);
                 map.put(head, map.get(head) - 1);
+                // no remove key, since the while condition is not check map size
                 start++;
             }
 
@@ -27,8 +28,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Output: 5
         System.out.println(maxLengthCharReplacement("aabccbb", 2));
+        // Output: 4
         System.out.println(maxLengthCharReplacement("abbcb", 1));
+        // Output: 1
         System.out.println(maxLengthCharReplacement("abccde", 1));
     }
 }

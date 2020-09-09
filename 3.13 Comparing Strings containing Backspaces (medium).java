@@ -34,10 +34,15 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Output: true
         System.out.println(compare("xy#z", "xzz#"));
+        // Output: false
         System.out.println(compare("xy#z", "xyz#"));
+        // Output: true
         System.out.println(compare("xp#", "xyz##"));
+        // Output: true
         System.out.println(compare("xywrrmp", "xywrrmu#p"));
+        // Output: true
         System.out.println(compare("#abc", "abc"));
     }
 }

@@ -37,8 +37,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Output: 3
         System.out.println(noRepeatedSubstringWithMap("aabccbb"));
+        // Output: 2
         System.out.println(noRepeatedSubstringWithMap("abbbb"));
+        // Output: 3
         System.out.println(noRepeatedSubstringWithMap("abccde"));
     }
 }

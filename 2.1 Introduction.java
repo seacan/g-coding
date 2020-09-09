@@ -21,6 +21,7 @@ public class Main {
 
 
     public static void main(String[] args) {
+        // Output: [2.2, 2.8, 2.4, 3.6, 2.8]
         double[] res = getAverage(new int[]{1, 3, 2, 6, -1, 4, 1, 8, 2}, 5);
         System.out.println(Arrays.toString(res));
     }

@@ -18,8 +18,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Output: 2
         System.out.println(findMinSubArray(new int[]{2, 1, 5, 2, 3, 2}, 7));
+        // Output: 1
         System.out.println(findMinSubArray(new int[]{2, 1, 5, 2, 8}, 7));
+        // Output: 3
         System.out.println(findMinSubArray(new int[]{3, 4, 1, 1, 6}, 8));
     }
 }

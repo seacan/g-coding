@@ -21,7 +21,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Output: [0, 1, 4, 4, 9]
         System.out.println(Arrays.toString(makeSquare(new int[]{-2, -1, 0, 2, 3})));
+        // Output: [0, 1, 1, 4, 9]
         System.out.println(Arrays.toString(makeSquare(new int[]{-3, -1, 0, 1, 2})));
     }
 }

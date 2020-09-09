@@ -41,7 +41,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Output: [1, 2]
         System.out.println(findStringAnagrams("ppqp", "pq"));
+        // Output: [2, 3, 4]
         System.out.println(findStringAnagrams("abbcabc", "abc"));
     }
 }

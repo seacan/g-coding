@@ -29,8 +29,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Output: 4
         System.out.println(longestSubstringKDistinct("araaci", 2));
+        // Output: 2
         System.out.println(longestSubstringKDistinct("araaci", 1));
+        // Output: 5
         System.out.println(longestSubstringKDistinct("cbbebi", 3));
     }
 }

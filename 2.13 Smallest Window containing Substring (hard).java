@@ -41,8 +41,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Output: "abdec"
         System.out.println(findMinSubstring("aabdec", "abc"));
+        // Output: "abc"
         System.out.println(findMinSubstring("abdabca", "abc"));
+        // Output: ""
         System.out.println(findMinSubstring("adcad", "abc"));
     }
 }

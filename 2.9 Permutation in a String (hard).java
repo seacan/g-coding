@@ -7,9 +7,8 @@ import java.util.Map;
 public class Main {
     public static boolean stringPermutationMatch(String str, String pattern) {
         Map<Character, Integer> patternMap = new HashMap<>();
-        for (char c : pattern.toCharArray()) {
-            patternMap.put(c, patternMap.getOrDefault(c, 0) + 1);
-        }
+        for (char c : pattern.toCharArray())
+            patternMap.put(c, patternMap.getOrDefault(c, 0) + 1);        
 
         int start = 0, match = 0;
         for (int end = 0; end < str.length(); end++) {
@@ -38,9 +37,13 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Output: true
         System.out.println(stringPermutationMatch("oidbcaf", "abc"));
+        // Output: false
         System.out.println(stringPermutationMatch("odicf", "dc"));
+        // Output: true
         System.out.println(stringPermutationMatch("bcdxabcdy", "bcdyabcdx"));
+        // Output: true
         System.out.println(stringPermutationMatch("aaacb", "abc"));
     }
 }

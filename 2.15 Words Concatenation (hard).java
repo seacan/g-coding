@@ -18,8 +18,7 @@ public class Main {
             Map<String, Integer> curMap = new HashMap<>(wordMap);
             while (!curMap.isEmpty()) {
                 boolean found = false;
-                Set<String> curWords = new HashSet<>(curMap.keySet());   // set is modified in the loop
-                for (String word : curWords) {
+                for (String word : new ArrayList<>(curMap.keySet())) {
                     if (curString.startsWith(word)) {
                         found = true;
                         curString = curString.substring(word.length());
@@ -29,17 +28,18 @@ public class Main {
                 }
                 if (!found) break;
             }
-            if (curMap.isEmpty()) {
-                res.add(i);
-            }
+            if (curMap.isEmpty()) res.add(i); 
         }
 
         return res;
     }
 
     public static void main(String[] args) {
+        // Output: [0, 3]
         System.out.println(finWordConcatenation("catfoxcat", new String[]{"cat", "fox"}));
+        // Output: [3]
         System.out.println(finWordConcatenation("catcatfoxfox", new String[]{"cat", "fox"}));
+        // Output: [5, 8]
         System.out.println(finWordConcatenation("tigercattigercatcat", new String[]{"cat", "cat", "tiger"}));
     }
 }

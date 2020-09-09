@@ -37,7 +37,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Output: 6
         System.out.println(maxOnesWithReplacement2(new int[]{0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1}, 2));
+        // Output: 9
         System.out.println(maxOnesWithReplacement2(new int[]{0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1}, 3));
     }
 }

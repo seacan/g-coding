@@ -16,7 +16,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Output: [1, 3]
         System.out.println(Arrays.toString(pairWithTargetSum(new int[]{1, 2, 3, 4, 6}, 6)));
+        // Output: [0, 2]
         System.out.println(Arrays.toString(pairWithTargetSum(new int[]{2, 5, 9, 11}, 11)));
     }
 }

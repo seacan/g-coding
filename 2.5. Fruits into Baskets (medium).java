@@ -5,6 +5,7 @@ import java.util.Map;
 
 import static java.lang.Math.max;
 
+// Given k baskets and your goal is to put maximum number of fruits in each basket.
 public class Main {
     public static int maxFruitCountOfKType(char[] arr, int k) {
         int maxLength = 0, start = 0;
@@ -23,7 +24,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Output: 3
         System.out.println(maxFruitCountOfKType(new char[]{'A', 'B', 'C', 'A', 'C'}, 2));
+        // Output: 5
         System.out.println(maxFruitCountOfKType(new char[]{'A', 'B', 'C', 'B', 'B', 'C'}, 2));
     }
 }

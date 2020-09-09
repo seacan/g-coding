@@ -18,7 +18,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Output: 9
         System.out.println(findMaxSumSubArray(new int[]{2, 1, 5, 1, 3, 2}, 3));
+        // Output: 7
         System.out.println(findMaxSumSubArray(new int[]{2, 3, 4, 1, 5}, 2));
     }
 }
