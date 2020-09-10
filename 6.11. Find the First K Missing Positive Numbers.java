@@ -35,12 +35,15 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Output: [1, 2, 6]
         int[] arr = new int[]{3, -1, 4, 5, 5};
         System.out.println(findNumber(arr, 3));
 
+        // Output: [1, 5, 6]
         arr = new int[]{2, 3, 4};
         System.out.println(findNumber(arr, 3));
 
+        // Output: [1, 2]
         arr = new int[]{-2, -3, 4};
         System.out.println(findNumber(arr, 2));
     }

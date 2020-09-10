@@ -16,7 +16,7 @@ public class Main {
                 return i + 1;
             }
         }
-        return -1;
+        return nums.length + 1;
     }
 
     public static void main(String[] args) {

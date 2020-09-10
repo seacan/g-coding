@@ -27,6 +27,7 @@ public class Main {
             newInterval.end = Math.max(newInterval.end, intervals.get(i).end);
             i++;
         }
+        // update then insert
         res.add(newInterval);
         while (i < intervals.size()) res.add(intervals.get(i++));        
 

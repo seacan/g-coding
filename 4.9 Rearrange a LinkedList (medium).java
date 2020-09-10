@@ -49,6 +49,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Input: 2 -> 4 -> 6 -> 8 -> 10 -> 12 -> null
+        // Output: 2 -> 12 -> 4 -> 10 -> 6 -> 8 -> null
         Node head = new Node(2);
         head.next = new Node(4);
         head.next.next = new Node(6);

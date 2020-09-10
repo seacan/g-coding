@@ -8,7 +8,10 @@ public class Main {
     public static List<Integer> findDuplicateNumbers1(int[] nums) {
         List<Integer> res = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
+            // nums[i] != i + 1 checks if the right number is already at the right position
+            // without this checking, even the number at the right position goes to else statement
             if (nums[i] != i + 1) {
+                // nums[i] != nums[nums[i] - 1] to move the number to the right position
                 if (nums[i] != nums[nums[i] - 1]) {
                     int temp = nums[i], j = nums[i] - 1;
                     nums[i] = nums[j];

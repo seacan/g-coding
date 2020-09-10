@@ -28,8 +28,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // True: 0 -> 1 -> 3 -> 0
         System.out.println(hasLoop(new int[]{1, 2, -1, 2, 2}));
+        // True: 1 -> 3 -> 1
         System.out.println(hasLoop(new int[]{2, 2, -1, 2}));
+        // False
         System.out.println(hasLoop(new int[]{2, 1, -1, -2}));
     }
 }

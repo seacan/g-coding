@@ -55,6 +55,7 @@ public class Main {
         input.add(new ArrayList<>(Arrays.asList(new Interval(1, 3), new Interval(5, 6))));
         input.add(new ArrayList<>(Arrays.asList(new Interval(2, 3), new Interval(6, 8))));
         List<Interval> res = findFreeTime(input);
+        // Output: [3,5]
         System.out.println("Free times are:");
         for (Interval i : res) System.out.println("[" + i.start + "," + i.end + "]");
 
@@ -63,6 +64,7 @@ public class Main {
         input.add(new ArrayList<>(Arrays.asList(new Interval(2, 4))));
         input.add(new ArrayList<>(Arrays.asList(new Interval(6, 8))));
         res = findFreeTime(input);
+        // Output: [4,6], [8,9]
         System.out.println("Free times are:");
         for (Interval i : res) System.out.println("[" + i.start + "," + i.end + "]");
 
@@ -71,6 +73,7 @@ public class Main {
         input.add(new ArrayList<>(Arrays.asList(new Interval(2, 4))));
         input.add(new ArrayList<>(Arrays.asList(new Interval(3, 5), new Interval(7, 9))));
         res = findFreeTime(input);
+        // Output: [5,7]
         System.out.println("Free times are:");
         for (Interval i : res) System.out.println("[" + i.start + "," + i.end + "]");
     }
