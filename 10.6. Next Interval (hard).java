@@ -33,7 +33,7 @@ public class Main {
                 while (!maxStartHeap.isEmpty() && intervals[maxStartHeap.peek()].start >= intervals[topEnd].end)
                     topStart = maxStartHeap.poll();
                 res[topEnd] = topStart;
-                // maxStartHeap.offer(topStart);
+                maxStartHeap.offer(topStart);
             }
         }
         return res;
