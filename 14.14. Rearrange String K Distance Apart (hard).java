@@ -24,6 +24,32 @@ public class Main {
         return res.length() == str.length() ? res.toString() : "";
     }
 
+    // Similar idea as 14.16
+    public static String rearrange(String str, int k) {
+        if (k <= 1) return "";
+        Map<Character, Integer> map = new HashMap<>();
+        for (char c : str.toCharArray()) map.put(c, map.getOrDefault(c, 0) + 1);
+        Queue<Map.Entry<Character, Integer>> maxHeap =
+                new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
+        maxHeap.addAll(map.entrySet());
+        StringBuilder res = new StringBuilder();
+        while (!maxHeap.isEmpty()) {
+            Queue<Map.Entry<Character, Integer>> queue = new LinkedList<>();
+            int i = k;
+            for (; i >= 0 && !maxHeap.isEmpty(); i--) {
+                Map.Entry<Character, Integer> cur = maxHeap.poll();
+                res.append(cur.getKey());
+                if (cur.getValue() > 1) {
+                    cur.setValue(cur.getValue() - 1);
+                    queue.offer(cur);
+                }
+            }
+            if (!queue.isEmpty() && i > 0) return "";
+            maxHeap.addAll(queue);
+        }
+        return res.length() == str.length() ? res.toString() : "";
+    }
+
     public static void main(String[] args) {
         System.out.println(rearrange("mmpp", 2));
         System.out.println(rearrange("Programming", 3));
