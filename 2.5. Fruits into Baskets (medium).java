@@ -12,7 +12,7 @@ public class Main {
         Map<Character, Integer> map = new HashMap<>();
         for (int end = 0; end < arr.length; end++) {
             map.put(arr[end], map.getOrDefault(arr[end], 0) + 1);
-            if (map.size() > k) {
+            while (map.size() > k) {
                 map.put(arr[start], map.get(arr[start]) - 1);
                 if (map.get(arr[start]) == 0)
                     map.remove(arr[start]);

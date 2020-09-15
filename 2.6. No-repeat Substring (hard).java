@@ -28,7 +28,8 @@ public class Main {
         Map<Character, Integer> map = new HashMap<>();
         for (int end = 0; end < str.length(); end++) {
             if (map.containsKey(str.charAt(end))) {
-                start = map.get(str.charAt(end)) + 1;   // move start index
+                // use max to skip multiple same chars, e.g. "abba"
+                start = Math.max(start, map.get(s.charAt(i)) + 1);
             }
             map.put(str.charAt(end), end);
             maxLength = max(maxLength, end - start + 1);
