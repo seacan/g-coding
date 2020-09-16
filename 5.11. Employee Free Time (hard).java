@@ -31,16 +31,19 @@ public class Main {
         for (int i = 0; i < schedule.size(); i++)
             minHeap.offer(new EmployeeSchedule(schedule.get(i).get(0), i, 0));
 
-        Interval lastInterval = minHeap.peek().interval;
+        Interval lastInterval = null;
         while (!minHeap.isEmpty()) {
             EmployeeSchedule cur = minHeap.poll();
-            if (lastInterval.end < cur.interval.start) {
-                res.add(new Interval(lastInterval.end, cur.interval.start));
-                lastInterval = cur.interval;
-            } else {
-                if (lastInterval.end < cur.interval.end)
+            if (lastInterval != null) {
+                if (lastInterval.end < cur.interval.start) {
+                    res.add(new Interval(lastInterval.end, cur.interval.start));
                     lastInterval = cur.interval;
-            }
+                } else {
+                    if (lastInterval.end < cur.interval.end)
+                        lastInterval = cur.interval;
+                }
+            } else
+                lastInterval = cur.interval;
 
             if (schedule.get(cur.employeeIndex).size() > cur.scheduleIndex + 1) {
                 minHeap.offer(new EmployeeSchedule(schedule.get(cur.employeeIndex).get(cur.scheduleIndex + 1),
