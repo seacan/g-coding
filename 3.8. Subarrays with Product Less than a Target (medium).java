@@ -14,7 +14,7 @@ public class Main {
             while (left <= right && product >= target)
                 product /= arr[left++];
             List<Integer> local = new ArrayList<>();
-            for (int i = right; i >= left; i--) {   // key is to add reversely
+            for (int i = right; i >= left; i--) {   // key is to add reversely to avoid duplicate
                 local.add(0, arr[i]);
                 res.add(new ArrayList<>(local));
             }

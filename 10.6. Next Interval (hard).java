@@ -27,14 +27,11 @@ public class Main {
         int[] res = new int[intervals.length];
         for (int i = 0; i < intervals.length; i++) {
             int topEnd = maxEndHeap.poll();
-            res[topEnd] = -1;   // default value
-            if (intervals[maxStartHeap.peek()].start >= intervals[topEnd].end) {
-                int topStart = maxStartHeap.poll();
-                while (!maxStartHeap.isEmpty() && intervals[maxStartHeap.peek()].start >= intervals[topEnd].end)
-                    topStart = maxStartHeap.poll();
-                res[topEnd] = topStart;
-                maxStartHeap.offer(topStart);
-            }
+            int topStart = -1;
+            while (!maxStartHeap.isEmpty() && intervals[maxStartHeap.peek()].start >= intervals[topEnd].end)
+                topStart = maxStartHeap.poll();
+            res[topEnd] = topStart;
+            if (topStart != -1) maxStartHeap.offer(topStart);
         }
         return res;
     }

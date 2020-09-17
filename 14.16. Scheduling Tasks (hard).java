@@ -16,7 +16,7 @@ public class Main {
         while (!maxHeap.isEmpty()) {
             Queue<Map.Entry<Character, Integer>> waitList = new LinkedList<>();
             int i = k + 1;
-            for (; i >= 0 && !maxHeap.isEmpty(); i--) {
+            for (; i > 0 && !maxHeap.isEmpty(); i--) {
                 count++;
                 Map.Entry<Character, Integer> cur = maxHeap.poll();
                 if (cur.getValue() > 1) {

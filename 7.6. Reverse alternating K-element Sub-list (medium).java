@@ -46,6 +46,7 @@ public class Main {
         head.next.next.next.next.next = new Node(6);
         head.next.next.next.next.next.next = new Node(7);
         head.next.next.next.next.next.next.next = new Node(8);
+        // Output: 2 1 3 4 6 5 7 8 
         Node res = reverse(head, 2);
         while (res != null) {
             System.out.println(res.value);

@@ -35,13 +35,10 @@ public class Main {
         while (!minHeap.isEmpty()) {
             EmployeeSchedule cur = minHeap.poll();
             if (lastInterval != null) {
-                if (lastInterval.end < cur.interval.start) {
+                if (lastInterval.end < cur.interval.start)
                     res.add(new Interval(lastInterval.end, cur.interval.start));
+                if (lastInterval.end < cur.interval.end)  // true if // lastInterval.end < cur.interval.start
                     lastInterval = cur.interval;
-                } else {
-                    if (lastInterval.end < cur.interval.end)
-                        lastInterval = cur.interval;
-                }
             } else
                 lastInterval = cur.interval;
 

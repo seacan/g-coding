@@ -21,14 +21,11 @@ public class Main {
         queue.add(root);
         TreeNode preNode = null;
         while (!queue.isEmpty()) {
-            int size = queue.size();
-            for (int i = 0; i < size; i++) {
-                TreeNode curNode = queue.poll();
-                if (preNode != null) preNode.next = curNode;
-                preNode = curNode;
-                if (curNode.left != null) queue.offer(curNode.left);
-                if (curNode.right != null) queue.offer(curNode.right);
-            }
+            TreeNode curNode = queue.poll();
+            if (preNode != null) preNode.next = curNode;
+            preNode = curNode;
+            if (curNode.left != null) queue.offer(curNode.left);
+            if (curNode.right != null) queue.offer(curNode.right);
         }
     }
 
