@@ -44,10 +44,11 @@ public class Main {
                     queue.offer(cur);
                 }
             }
+            // More to be added, but all available chars are added to keep K distance
             if (!queue.isEmpty() && i > 0) return "";
             maxHeap.addAll(queue);
         }
-        return res.length() == str.length() ? res.toString() : "";
+        return res.toString();
     }
 
     public static void main(String[] args) {

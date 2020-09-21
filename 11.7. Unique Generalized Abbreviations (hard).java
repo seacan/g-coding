@@ -65,8 +65,10 @@ public class Main {
 
     public static void main(String[] args) {
         List<String> res = generateGeneralizedAbbreviationWithQueue("BAT");
+        // Output: [3, 2T, 1A1, 1AT, B2, B1T, BA1, BAT]
         System.out.println(res);
         res = generateGeneralizedAbbreviationWithQueue("code");
+        // Output: [4, 3e, 2d1, 2de, 1o2, 1o1e, 1od1, 1ode, c3, c2e, c1d1, c1de, co2, co1e, cod1, code]
         System.out.println(res);
     }
 }

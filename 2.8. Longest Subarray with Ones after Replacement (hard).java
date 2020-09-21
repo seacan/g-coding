@@ -15,7 +15,7 @@ public class Main {
                     maxOneCount--;
                 start++;
             }
-            maxLength = max(maxLength, end - start + 1);
+            maxLength = Math.max(maxLength, end - start + 1);
         }
         return maxLength;
     }
@@ -31,7 +31,7 @@ public class Main {
                     zeroCount--;
                 start++;
             }
-            maxLength = max(maxLength, end - start + 1);
+            maxLength = Math.max(maxLength, end - start + 1);
         }
         return maxLength;
     }

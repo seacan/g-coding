@@ -16,12 +16,12 @@ class Element {
 }
 
 class FrequencyStack {
-    int sequence = 0;
-    Queue<Element> maxHeap = new PriorityQueue<Element>((a, b) -> {
+    private int sequence = 0;
+    private Queue<Element> maxHeap = new PriorityQueue<Element>((a, b) -> {
         if (a.freq != b.freq) return b.freq - a.freq;
         return b.sequence - a.sequence;
     });
-    Map<Integer, Integer> map = new HashMap<>();
+    private Map<Integer, Integer> map = new HashMap<>();
 
     public void push(int num) {
         map.put(num, map.getOrDefault(num, 0) + 1);

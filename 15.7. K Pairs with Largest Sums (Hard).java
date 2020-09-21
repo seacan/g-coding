@@ -27,6 +27,7 @@ public class Main {
         int[] l1 = new int[]{9, 8, 2};
         int[] l2 = new int[]{6, 3, 1};
         List<int[]> res = findKLargestPairs(l1, l2, 3);
+        // Output: [9, 3], [9, 6], [8, 6] 
         for (int[] pairs : res) System.out.println(Arrays.toString(pairs));
     }
 }

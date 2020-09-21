@@ -37,10 +37,14 @@ public class Main {
 
     public static void main(String[] args) {
         ArrayReader reader = new ArrayReader(new int[]{4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30});
+        // Output: 6
         System.out.println(search(reader, 16));
+        // Output: -1
         System.out.println(search(reader, 11));
         reader = new ArrayReader(new int[]{1, 3, 8, 10, 15});
+        // Output: 4
         System.out.println(search(reader, 15));
+        // Output: -1
         System.out.println(search(reader, 200));
     }
 }

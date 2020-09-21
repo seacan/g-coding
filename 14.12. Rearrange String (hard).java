@@ -18,8 +18,8 @@ public class Main {
         while (!maxHeap.isEmpty()) {
             Map.Entry<Character, Integer> cur = maxHeap.poll();
             res.append(cur.getKey());
-            if (pre != null) maxHeap.offer(pre);
             cur.setValue(cur.getValue() - 1);
+            if (pre != null) maxHeap.offer(pre);
             pre = cur.getValue() > 0 ? cur : null;
         }
         return res.length() == str.length() ? res.toString() : "";

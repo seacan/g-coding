@@ -34,6 +34,7 @@ public class Main {
         while (count > 2) {
             int leaveSize = leaves.size();
             count -= leaveSize;
+            // Process all leaves in one batch
             for (int i = 0; i < leaveSize; i++) {
                 int cur = leaves.poll();
                 for (int neighbor : graph.get(cur)) {

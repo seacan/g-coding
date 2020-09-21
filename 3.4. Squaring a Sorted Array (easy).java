@@ -7,7 +7,7 @@ public class Main {
     public static int[] makeSquare(int[] arr) {
         int[] res = new int[arr.length];
         int left = 0, right = arr.length - 1, cur = res.length - 1;
-        while (left < right) {
+        while (left <= right) {
             int leftSquare = (int) Math.pow(arr[left], 2), rightSquare = (int) Math.pow(arr[right], 2);
             if (leftSquare <= rightSquare) {
                 res[cur--] = rightSquare;

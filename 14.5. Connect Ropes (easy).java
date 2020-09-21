@@ -19,6 +19,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Output: 33
+        // Explanation: First connect 1+3(=4), then 4+5(=9), and then 9+11(=20). So the total cost is 33 (4+9+20)
         System.out.println(minCost(new int[]{1, 3, 11, 5}));
         System.out.println(minCost(new int[]{3, 4, 5, 6}));
         System.out.println(minCost(new int[]{1, 3, 11, 5, 2}));

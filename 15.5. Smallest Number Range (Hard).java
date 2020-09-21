@@ -43,6 +43,7 @@ public class Main {
         Integer[] l2 = new Integer[]{4, 12};
         Integer[] l3 = new Integer[]{7, 8, 10};
         List<Integer[]> lists = new ArrayList<>(Arrays.asList(l1, l2, l3));
+        // Output: [4, 7]
         System.out.println(Arrays.toString(findSmallestRange(lists)));
     }
 }

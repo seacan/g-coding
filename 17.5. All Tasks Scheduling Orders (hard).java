@@ -33,6 +33,7 @@ public class Main {
                 candidateSets.add(entry.getKey());
         for (int candidate : candidateSets) {
             solution.add(candidate);
+            // don't forget to remove the node from inDegree map
             inDegree.remove(candidate);
             if (solution.size() == graph.size())
                 res.add(new ArrayList<>(solution));

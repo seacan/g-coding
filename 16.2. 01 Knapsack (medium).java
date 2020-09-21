@@ -37,7 +37,7 @@ public class Main {
         return dp[len - 1][capacity];
     }
 
-    // Another less optimized solution is to keep a int[2][capacity+1]
+    // Another less optimized solution is to keep a int[2][capacity+1], this solution kepps int[capacity+1]
     public static int solveKnapsackBottomUpOptimized(int[] weights, int[] profits, int capacity) {
         if (capacity <= 0 || profits.length == 0 || profits.length != weights.length) return 0;
         int len = weights.length;
