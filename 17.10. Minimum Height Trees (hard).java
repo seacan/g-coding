@@ -2,7 +2,7 @@ package com.solution;
 
 import java.util.*;
 
-// Find all MHTs of the given graph and return a list of their roots.
+// Find all Minimum Height Trees of the given graph and return a list of their roots.
 public class Main {
     public static List<Integer> findTrees(int node, int[][] edges) {
         List<Integer> res = new ArrayList<>();

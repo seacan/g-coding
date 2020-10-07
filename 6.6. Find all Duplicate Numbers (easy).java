@@ -9,7 +9,7 @@ public class Main {
         List<Integer> res = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
             // nums[i] != i + 1 checks if the right number is already at the right position
-            // without this checking, even the number at the right position goes to else statement
+            // without this checking, even the number at the right position will be added to res
             if (nums[i] != i + 1) {
                 // nums[i] != nums[nums[i] - 1] to move the number to the right position
                 if (nums[i] != nums[nums[i] - 1]) {

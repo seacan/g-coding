@@ -28,6 +28,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        // Output: 3
+        // Explanation: We can remove two occurrences of 3 to be left with 3 distinct numbers [7, 3, 8]
+        //              We have to skip 5 because it is not distinct and occurred twice. 
         System.out.println(findMaxDistinctNumbers(new int[]{7, 3, 5, 8, 5, 3, 3}, 2));
         System.out.println(findMaxDistinctNumbers(new int[]{3, 5, 12, 11, 12}, 3));
         System.out.println(findMaxDistinctNumbers(new int[]{1, 2, 3, 3, 3, 3, 4, 4, 5, 5, 5}, 2));

@@ -18,7 +18,7 @@ public class Main {
                     map.remove(arr[start]);
                 start++;
             }
-            maxLength = max(maxLength, end - start + 1);
+            maxLength = Math.max(maxLength, end - start + 1);
         }
         return maxLength;
     }

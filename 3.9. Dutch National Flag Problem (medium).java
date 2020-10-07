@@ -10,7 +10,7 @@ public class Main {
             if (arr[i] == 0) {
                 int temp = arr[left];
                 arr[left++] = arr[i];
-                arr[i] = temp;
+                arr[i] = temp;   // left side only has 1 and 0, no need to move back i
             } else if (arr[i] == 1) continue;
             else {
                 int temp = arr[right];

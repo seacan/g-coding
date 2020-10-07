@@ -18,7 +18,7 @@ public class Main {
                 start++;
             }
             set.add(str.charAt(end));
-            maxLength = max(maxLength, end - start + 1);
+            maxLength = Math.max(maxLength, end - start + 1);
         }
         return maxLength;
     }
@@ -32,7 +32,7 @@ public class Main {
                 start = Math.max(start, map.get(s.charAt(i)) + 1);
             }
             map.put(str.charAt(end), end);
-            maxLength = max(maxLength, end - start + 1);
+            maxLength = Math.max(maxLength, end - start + 1);
         }
         return maxLength;
     }

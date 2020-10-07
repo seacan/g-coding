@@ -9,9 +9,8 @@ import java.util.Map;
 public class Main {
     public static List<Integer> findStringAnagrams(String str, String pattern) {
         Map<Character, Integer> patternMap = new HashMap<>();
-        for (char c : pattern.toCharArray()) {
-            patternMap.put(c, patternMap.getOrDefault(c, 0) + 1);
-        }
+        for (char c : pattern.toCharArray())
+            patternMap.put(c, patternMap.getOrDefault(c, 0) + 1);        
 
         int start = 0, match = 0;
         List<Integer> res = new ArrayList<>();
