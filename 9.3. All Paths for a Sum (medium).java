@@ -33,6 +33,20 @@ public class Main {
         path.remove(path.size() - 1);
     }
 
+    private static void _findPathsHelper(TreeNode root, int sum, List<List<Integer>> res, List<Integer> path) {
+        if (root == null) return;
+        if (root.left == null && root.right == null && sum == root.value) {
+            List<Integer> copy = new ArrayList<>(path);
+            copy.add(root.value);
+            res.add(copy);
+            return;
+        }
+        path.add(root.value);
+        findPathsHelper(root.left, sum - root.value, res, path);
+        findPathsHelper(root.right, sum - root.value, res, path);
+        path.remove(path.size() - 1);
+    }
+
     public static List<List<Integer>> findPathsWithStack(TreeNode root, int sum) {
         List<List<Integer>> res = new ArrayList<>();
         List<Integer> path = new ArrayList<>();

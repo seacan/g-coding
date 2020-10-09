@@ -27,6 +27,10 @@ public class Main {
 
     private static void findOrdersHelper(Map<Integer, List<Integer>> graph, Map<Integer, Integer> inDegree,
                                          List<Integer> solution, List<List<Integer>> res) {
+       if (solution.size() == graph.size()) {
+            res.add(new ArrayList<>(solution));
+            return;
+       }
         Set<Integer> candidateSets = new HashSet<>();
         for (Map.Entry<Integer, Integer> entry : inDegree.entrySet())
             if (entry.getValue() == 0)
@@ -34,9 +38,7 @@ public class Main {
         for (int candidate : candidateSets) {
             solution.add(candidate);
             // don't forget to remove the node from inDegree map
-            inDegree.remove(candidate);
-            if (solution.size() == graph.size())
-                res.add(new ArrayList<>(solution));
+            inDegree.remove(candidate);            
             for (int neighbor : graph.get(candidate))
                 inDegree.put(neighbor, inDegree.get(neighbor) - 1);
 
