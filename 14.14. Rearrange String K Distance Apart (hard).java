@@ -35,8 +35,8 @@ public class Main {
         StringBuilder res = new StringBuilder();
         while (!maxHeap.isEmpty()) {
             Queue<Map.Entry<Character, Integer>> queue = new LinkedList<>();
-            int i = k;
-            for (; i >= 0 && !maxHeap.isEmpty(); i--) {
+            int i = k + 1;
+            for (; i > 0  && !maxHeap.isEmpty(); i--) {
                 Map.Entry<Character, Integer> cur = maxHeap.poll();
                 res.append(cur.getKey());
                 if (cur.getValue() > 1) {
@@ -44,9 +44,9 @@ public class Main {
                     queue.offer(cur);
                 }
             }
-            // More to be added, but all available chars are added to keep K distance
-            if (!queue.isEmpty() && i > 0) return "";
             maxHeap.addAll(queue);
+            if (!maxHeap.isEmpty() && i > 0) return "";
+
         }
         return res.toString();
     }
