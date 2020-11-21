@@ -20,7 +20,7 @@ public class Main {
         if (node == null) return false;
         if (level >= nums.length) return false;
         if (node.value != nums[level]) return false;
-        if (node.left == null && node.right == null && node.value == nums[level]) return true;
+        if (node.left == null && node.right == null && node.value == nums[level]) return true;  // also (level == nums.length - 1)?
 
         return findPathHelper(node.left, nums, level + 1) || findPathHelper(node.right, nums, level + 1);
     }
