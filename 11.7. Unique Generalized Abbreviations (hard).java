@@ -54,9 +54,11 @@ public class Main {
                     cur.str.append(cur.count);
                 res.add(cur.str.toString());
             } else {
+                // recurse on adding number
                 queue.add(new AbbreviatedWord(new StringBuilder(cur.str), cur.start + 1, cur.count + 1));
                 if (cur.count != 0)
                     cur.str.append(cur.count);
+                // recurse on adding char
                 queue.add(new AbbreviatedWord(new StringBuilder(cur.str).append(str.charAt(cur.start)), cur.start + 1, 0));
             }
         }

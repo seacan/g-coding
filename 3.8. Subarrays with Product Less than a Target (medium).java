@@ -11,7 +11,7 @@ public class Main {
         int product = 1, left = 0;
         for (int right = 0; right < arr.length; right++) {
             product *= arr[right];
-            while (left <= right && product >= target)
+            while (left <= right && product >= target)  // dont't forget to check left <= right
                 product /= arr[left++];
             List<Integer> local = new ArrayList<>();
             for (int i = right; i >= left; i--) {   // key is to add reversely to avoid duplicate
